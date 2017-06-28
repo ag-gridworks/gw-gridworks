@@ -1,0 +1,44 @@
+@charset "UTF-8";
+// Bootstrap Mixins
+@import "vendors/bootstrap/bootstrap/variables";
+@import "vendors/bootstrap/bootstrap/mixins";
+
+//Global Variables
+@import "globals/color-variables";
+@import "globals/font-variables";
+@import "globals/base";
+
+//Gloval User Variables
+@import "user-variables";
+
+//Atoms
+@import "bricks/shadows";
+@import "bricks/fonts";
+@import "bricks/buttons";
+@import "bricks/titles";
+@import "bricks/forms";
+@import "bricks/animations";
+@import "bricks/hovers";
+
+//Blocks
+@import "blocks/hero";
+@import "blocks/navbar";
+@import "blocks/boxes";
+@import "blocks/testmonials";
+@import "blocks/calls";
+@import "blocks/grids";
+@import "blocks/price-table";
+
+//Templates
+@import "templates/default/template_variables";
+@import "templates/default/base";
+@import "templates/default/index";
+@import "templates/default/pages";
+@import "templates/default/portfolio";
+@import "templates/default/responsive";
+
+@import "templates/custom/index";
+@import "templates/custom/inner-pages";
+
+//Responsive
+@import "globals/responsive";

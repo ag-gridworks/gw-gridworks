@@ -1,0 +1,72 @@
+.default-iv1 { // O que é e importancia
+	@include make-md-column(6);
+	text-align: center;
+	.item-inner {
+		padding: 60px;
+
+		.item-title {
+			font: 28px $sub-font;
+			font-weight: bold;
+			margin-bottom: 30px;
+			color: $title-color;
+		}
+
+		.item-icon {
+			width: 80px;
+			height: 80px;
+			display: block;
+			margin: 0 auto;
+			border-radius: 50%;
+			margin-bottom: 30px;
+			// border: 2px solid #fff;
+			background-color: $color-1;
+			box-shadow: 0 1px 4px 0px #999;
+			i {
+				color: $color-2;
+				font-size: 38px;
+				line-height: 80px;
+			}
+		}
+
+		.item-content {
+			font-size: 15px;
+			line-height: 28px;
+		}
+	}
+}
+
+.default-iv2 { // Serviços
+	@include make-xs-column(12);
+	@include make-sm-column(12);
+	@include make-md-column(12);
+	background-color: $color-1;
+	color: #fff;
+	padding: 30px;
+
+	.default-iv2__item {
+		@include make-xs-column(6);
+		@include make-sm-column(6);
+		@include make-md-column(3);
+	}
+}
+
+.default-iv3 {
+	@include make-md-column(12);
+	padding: 60px;
+	padding-top: 0px;
+
+	.default-iv3__item {
+		@include make-md-column(4);
+	}
+}
+
+.default-portfolio {
+	@include make-md-column(12);
+	padding: 0;
+
+	.default-portfolio__item {
+		@include make-xs-column(12);
+		@include make-sm-column(6);
+		@include make-md-column(6);
+	}
+}

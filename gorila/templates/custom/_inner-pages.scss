@@ -1,0 +1,366 @@
+#page-container {
+	@include make-md-column(12);
+	@include make-md-column-offset(0);
+	padding: 0;
+//	padding: 60px;
+text-align: center;
+
+.container-content{
+	padding: 0px 15px;
+	img {
+		margin-bottom: 15px;
+			//@include go-shadow-2;
+		}
+	}
+}
+
+/* ===============
+   POSTAGENS 
+   =============== */
+
+   .go-post-header {
+   	@include make-md-column(12);
+	//background: url('../../images/hero/header.jpg') no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	//margin-top: 65px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom, rgba(49, 54, 74, 0.64),$color-1);
+		opacity: 1; 
+	}
+
+	.post-header-content {
+		@include make-md-column(10);
+		@include make-md-column-offset(1);
+		position: relative;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		top: 50%;
+		padding-top: 65px;
+		transform: translateY(-50%); 
+
+		.item-title {
+			h1{color: #fff;
+			font-weight: bold;
+			text-transform: uppercase;}
+			margin-bottom: 15px;
+		}
+
+		.item-content {
+			font-weight: 300;
+			line-height: 30px;
+			font-size: 18px;
+			margin-bottom: 20px;
+
+			&:after {
+				content: "";
+				display: block;
+				height: 1px;
+				background-color: #fff;
+				width: 50%;
+				margin: 0 auto;
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+.go-post-header-info {
+	@include make-md-column(12);
+	//background-color: $color-1;
+	padding: 60px;
+	text-align: center;
+	color: #000;
+	line-height: 27px;
+	font-weight: 100;
+
+	p {
+		padding-top: 30px;
+	}
+}
+
+/* ===============
+   PÁGINAS 
+   =============== */
+
+
+   .go-page-header {
+   	@include make-md-column(12);
+	//background: url('../../images/hero/header.jpg') no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	//margin-top: 65px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom, rgba(49, 54, 74, 0.89), #31364a);
+		opacity: 1; 
+	}
+
+	.page-header-content {
+		@include make-md-column(10);
+		@include make-md-column-offset(1);
+		position: relative;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		top: 50%;
+		padding-top: 65px;
+		transform: translateY(-50%); 
+
+		.item-title {
+			font: 32px $sub-font;
+			color: #fff;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+
+		.item-content {
+			font-weight: 300;
+			line-height: 30px;
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.page-nav {
+	@include make-xs-column(12);
+	@include make-sm-column(12);
+	@include make-md-column(12);
+	text-align: center;
+	//background-color: $color-1;
+	//@include svgbg-typo;
+	padding: 30px;
+	color: $color-1;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: .3s;
+	&:before {
+		content: "";
+		display: block;
+		height: 1px;
+		background-color: $color-1;
+		opacity: .2;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+}
+
+.page-nav .previous {
+	text-align: left;
+}
+
+.page-nav .next {
+	text-align: right;
+}
+
+// Pagina web design
+
+.quote-box {
+	margin: 30px 0px;
+	.item-quote {
+		i {
+		font-size: 50px;
+		color: #d9d9d9;
+		//margin-bottom: -75px;
+		}
+	}
+	.item-content {
+		font-size: 24px;
+		font-family: $i-font;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		height: 2px;
+		background-color: $color-1;
+		opacity: .2;
+		width: 40%;
+		margin: 0 auto;
+		margin-top: 21px;
+	}
+}
+
+.default-box-type {
+	@include make-md-column(12);
+	padding: 45px 60px;
+	p {
+		line-height: 28px;
+		font-size: 16px;
+	}
+
+	.item-icon {
+		width: 120px;
+		height: 120px;
+		background-color: #f13a41;
+		margin: 0 auto;
+		border-radius: 50%;
+		@include go-shadow-2;
+		i {
+			padding-top: 30px;
+			font-size: 55px;
+			color: #fff;
+		}
+	}
+}
+
+
+.normal-box {
+	@extend .default-box-type;
+}
+
+.sub-box {
+	@extend .default-box-type;
+	@include svgbg-typo;
+	background-color: $color-1;
+	color: #fff;
+	.item-icon {
+		background-color: $color-3;
+		i {
+			color: #fff;
+		}
+	}
+}
+
+.gradient-box {
+	@extend .default-box-type;
+	@include gradient-default;
+	color: #fff;
+
+	.item-icon {
+		background-color: #fff;
+		i {
+			color: $color-3;
+		}
+	}
+}
+
+.ex-boxes {
+	@include make-md-column(12);
+	margin-top: 15px;
+	.item-1 {
+		@include make-md-column(6);
+		padding: 0;
+		margin: 15px 0px;
+		.item-inner {
+			//border: 2px solid #fff;
+			border-radius: 3px;
+			padding: 15px;
+			text-align: left;
+			height: 100%;
+			.item-index {
+				padding: 0;
+				float: left;
+				height: 100%;
+				padding-right: 15px;
+				font-family: $sub-font;
+				font-size: 31px;
+				font-weight: 600;
+				border-right: 1px solid #fff;
+			}
+
+			.item-title {
+				margin-bottom: 9px;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 18px;
+				display: flex;
+				padding-left: 15px;
+			}
+
+			.item-content {
+				display: flex;
+				padding-left: 15px;
+				height: 100%;
+			}
+		}
+	}
+}
+
+.price-boxes {
+	@include make-md-column(8);
+	@include make-md-column-offset(2);
+	padding: 45px 0px;
+
+	.item-icon {
+		width: 120px;
+		height: 120px;
+		background-color: #f13a41;
+		margin: 0 auto;
+		border-radius: 50%;
+		@include go-shadow-2;
+		i {
+			padding-top: 30px;
+			font-size: 55px;
+			color: #fff;
+		}
+	}
+
+	.price-box {
+		@include make-md-column(6);
+		margin: 30px 0px;
+		.item-inner {
+			border-radius: 3px;
+			@include go-shadow;
+			background-color: #FFF;
+
+			.item-title {
+				background-color: #00C853;
+				//@include gradient-default;
+				padding: 30px;
+				font-weight: bold;
+				font-family: $sub-font;
+				text-transform: uppercase;
+				color: #fff;
+				font-size: 21px;
+			}
+
+			.item-price {
+				padding: 30px;
+				font-family: $sub-font;
+				font-size: 39px;
+				color: #fff;
+				background-color: $color-1;
+
+				span {font-size: 20px}
+			}
+
+			.item-title.ad {
+				background-color: $color-2;
+			}
+
+			.item-content {
+				padding: 30px;
+				color: $color-1dark;
+
+				ul{
+					li{
+						padding: 20px 0px;
+						font-size: 16px;
+						border-bottom: 1px solid #cfcfcf;
+					}
+				}
+			}
+
+			.item-options {
+				margin-top: 15px;
+			}
+		}
+	}
+}

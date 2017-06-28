@@ -1,0 +1,161 @@
+.go-navbar {
+    @include make-xs-column(12);
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    // border-bottom: 1px solid $sub_color;
+    padding: 0;
+    // margin-bottom: 2px;
+   //background-color: $color-1;
+   z-index: 1000;
+   //color: #fff;
+   position: absolute;
+}
+
+.go-navbar.hero {
+    background-color: transparent;
+}
+
+.go-nav-down {
+    background-color: $color-1;
+    position: fixed;
+    @include go-shadow;
+    //background: linear-gradient(-90deg, $color-2, $color-3);
+    ul.topnav li a {
+        //color: $color-1 !important;
+    }
+}
+
+ul.topnav {
+    @include make-sm-column(10);
+    @include make-sm-column-offset(1);
+    @include make-md-column(10);
+    @include make-md-column-offset(1);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    // background-color: #333;
+    padding: 5px 0px;
+}
+
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+ul.topnav li a.brand {
+    font: 21px $sub-font;
+    color: #fff;
+    text-transform: none;
+    padding: 12px;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+ul.topnav li a.button {
+    float: right;
+    background-color: $color-3;
+    font-weight: 700 !important;
+    font: 13px $sub-font;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid transparent;
+    margin-top: 14px;
+
+    &:hover {
+        color: #fff;
+        border: 1px solid $color-3;
+        background-color: transparent;
+        cursor: pointer !important;
+    }
+}
+
+ul.topnav li a:hover {color: $color-2;}
+ul.topnav li.icon {display: none;}
+ul.topnav li.nav-button {
+    float: right;
+}
+
+
+// navbar 2
+
+
+.overlay {  
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: $color-2;
+    background-color: $color-1;
+    opacity: .95;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+ border-top: 20px solid transparent;
+
+      -moz-border-image: -moz-linear-gradient(top left, $color-2 0%, $color-3 100%);
+      -webkit-border-image: -webkit-linear-gradient(top left, $color-2 0%, $color-3 100%);
+      border-image: linear-gradient(to bottom right, $color-2 0%, $color-3 100%);
+
+      border-image-slice: 1;
+}
+
+.overlay-content {
+    position: relative;
+    transform: translateY(25%);
+    width: 100%;
+    text-align: center; 
+    margin-top: 30px;
+}
+
+.overlay a {
+    font-family: $sub-font;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.overlay a:hover, .overlay a:focus {
+    color: $color-2;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    font-size: 72px;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    text-align: center;
+}
+
+.closebtn-text {
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

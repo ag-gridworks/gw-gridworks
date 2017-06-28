@@ -1,0 +1,64 @@
+.eg-taylor-container {
+    background-color: rgba(49, 54, 74, 0.49) !important;
+}
+
+.custom-section3 {
+	@include make-md-column(12);
+	display: table;
+	background-color: $color-1;
+	>.section__item {
+		@include make-xs-column(12);
+		@include make-sm-column(6);
+		@include make-md-column(6);
+		margin: 15px 0px;
+		>.item-inner {
+			//padding: 30px;
+			@include go-shadow;
+		}
+	}
+}
+
+.custom-callsection {
+	@include make-md-column(12);
+	background: linear-gradient(-90deg, $color-2, $color-3);
+	padding: 60px;
+	color: #fff;
+	text-align: center;
+	&:after {
+		@include svgbg-x;
+	}
+
+	.item-title {
+		font-family: $sub-font;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 28px;
+	}
+
+	.item-subtitle {
+		font-weight: 300;
+		font-size: 21px;
+		margin-top: 15px;
+	}
+
+	.item-content {
+		margin-top: 20px;
+		font-size: 18px;
+	}
+
+	.item-options {
+		margin-top: 20px;
+	}
+}
+
+
+.custom-form__items {
+	@include make-md-column(12);
+	padding: 60px 0px;
+	text-align: center;
+	.custom-form__item {
+		@include make-xs-column(12);
+		@include make-sm-column(4);
+		@include make-md-column(4);
+	}
+}

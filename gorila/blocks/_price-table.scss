@@ -1,0 +1,25 @@
+.go-price-table {
+	@extend .go-box-default;
+	text-align: center;
+	.item-title {
+		background-color: $color-1;
+		padding: 20px;
+		font: 28px $sub-font;
+		color: #fff;
+	}
+
+	.item-price {
+		background-color: #FFF;
+		font: 30px $sub-font;
+		padding: 20px;
+	}
+
+	.item-option {
+		padding: 10px;
+		border-bottom: 1px solid #e2e2e2;
+	}
+
+	.item-button {
+		padding: 10px;
+	}
+}

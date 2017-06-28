@@ -1,0 +1,87 @@
+.go-grid {
+	//background-color: $color-1;
+	overflow: hidden;
+
+	.item-title {
+		font: 25px $sub-font;
+		display: none;
+		position: absolute;
+		color: #fff;
+		bottom: 50%;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	 img {
+	// 	height: 100%;
+	 	width: 100%;
+	 	@include go-shadow;
+	 	//opacity: .3;
+	// 	max-width: none;
+	// 	position: absolute;
+	// 	top: -9999px;
+	// 	bottom: -9999px;
+	// 	left: -9999px;
+	// 	right: -9999px;
+	// 	margin: auto;
+		transition: 0.2s;
+	// }
+
+	// &:before {
+	// 	content: "";
+	// 	display: block;
+	// 	padding-top: 100%; 	/* initial ratio of 1:1*/
+	 }
+
+	&:hover {
+		cursor: pointer;
+		.item-title {
+			display: block;
+		}
+
+		img {
+			height: 110%;
+			width: 110%;
+			opacity: .1;
+			transition: 0.2s;
+		}
+	}
+}
+
+.go-icon-grid {
+	.item-title {
+		margin-bottom: 15px;
+		i {
+			float: left;
+			color: $color-2;
+			font-size: 30px;
+			padding-right: 15px;
+		}
+	}
+
+	.item-content {
+		display: inline-block;
+	}
+}
+
+.go-grid-item {
+	.item-info {
+		bottom: 0;
+		color: #fff;
+		text-align: center;
+	}
+
+	img {
+		&:before {
+			display: block;
+			position: relative;
+			background-image: linear-gradient(to bottom, transparent 0%, white 100%);
+			margin-top: -150px;
+			height: 150px;
+			width: 100%;
+			content: '';
+		}
+	}
+}

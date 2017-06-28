@@ -1,0 +1,44 @@
+body {
+// background-color: #ededed;
+color: #84878a;
+font-family: 'Open Sans' !important;
+}
+
+.gw-container {
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.container-loaded {
+	opacity: 1;
+}
+
+
+.content {@include make-row;}
+
+html, body, #container { height: 100%; margin: 0; padding: 0; }
+body > #container { height: auto; min-height: 100%; }
+footer {
+	display: table;
+	width: 100%;
+}
+
+ul {list-style-type: none; margin: 0; padding: 0}
+p {margin: 0}
+
+a {text-decoration: none !important;}
+a:link {text-decoration: none !important}
+a:visited {text-decoration: none !important}
+a:hover {text-decoration: none !important}
+a:active {text-decoration: none !important}
+
+// Mantem todas as imagens do HTML responsivas ao elemento
+img {@include img-responsive;}
+
+// Limpar
+.clear {clear: both;}
+
+// Alinhar fonte dos elementos
+.left {text-align: left !important;}
+.right {text-align: right !important;}
+.center {text-align: center !important;}
